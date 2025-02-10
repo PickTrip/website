@@ -1,0 +1,137 @@
+@charset "UTF-8";
+body {
+  background-image: linear-gradient(#0189eb, #74c3fc);
+}
+
+.solgen {
+  position: absolute;
+  bottom: 50px;
+  left: 50px;
+  z-index: 99;
+  color: #fff;
+}
+.solgen img {
+  width: 120px;
+}
+
+spline-viewer {
+  height: 100vh;
+  width: 100vw;
+  position: sticky;
+  top: 0; /* 當捲動到頂端時就固定 */
+}
+
+/* 用於 .w-layout-hflex 的 Flex 排版 */
+.w-layout-hflex {
+  flex-direction: row;
+  align-items: flex-start;
+  display: flex;
+}
+
+/* 主畫面區：hero-without-image */
+.hero-without-image {
+  color: #fff;
+  border-bottom: 1px #e4ebf3;
+  flex-flow: column;
+  justify-content: flex-start;
+  align-items: center;
+  height: 900vh;
+  margin-bottom: 221px;
+  padding: 10% 30px 80px;
+  display: flex;
+  overflow: clip;
+  margin-top: 100vh;
+}
+
+/* 用於 .container-2 的容器 */
+.container-2 {
+  width: 100%;
+  max-width: 940px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 用於 hero-wrapper-two-2 的內部排版 */
+.hero-wrapper-two-2 {
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 95px;
+  font-size: 12px;
+  display: flex;
+  position: sticky;
+  top: 167px;
+  bottom: auto;
+}
+
+/* 用於 .heading-3 的標題 */
+.heading-3 {
+  opacity: 0;
+  margin-top: -104px;
+  margin-bottom: 60px;
+  font-size: 25px;
+  position: static;
+  top: 200vh;
+  bottom: auto;
+}
+
+/* 用於圖片 image-2 */
+.image-2 {
+  vertical-align: baseline;
+  max-width: 330px;
+  position: sticky;
+  top: 257px;
+  overflow: clip;
+}
+
+/* 用於 flex-block（與 w-layout-hflex 搭配） */
+.flex-block {
+  grid-column-gap: 13px;
+  grid-row-gap: 13px;
+  border-radius: 0;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  margin-left: calc(70vw - 450px);
+  margin-right: auto;
+  position: sticky;
+  top: 251px;
+}
+
+/* 用於內部排列圖片的區塊 */
+.div-block-4 {
+  display: flex;
+}
+
+/* 用於 .image-3 的圖片 */
+.image-3 {
+  margin-right: 16px;
+  position: sticky;
+  top: 200px;
+}
+
+/* RWD：在寬度 991px 以下時調整 .container-2 的最大寬度 */
+@media screen and (max-width: 991px) {
+  .container-2 {
+    max-width: 728px;
+  }
+}
+/* RWD：在寬度 767px 以下時，調整 hero 區域的內邊距 */
+@media screen and (max-width: 767px) {
+  .hero-without-image {
+    padding: 60px 15px;
+  }
+}
+/* RWD：在寬度 479px 以下時，進一步調整容器與 hero 高度 */
+@media screen and (max-width: 479px) {
+  .container-2 {
+    max-width: none;
+  }
+  .hero-without-image {
+    height: 1000vh;
+  }
+}/*# sourceMappingURL=new.css.map */
