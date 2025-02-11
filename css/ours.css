@@ -5,6 +5,10 @@ body {
   background: linear-gradient(180deg, #0189eb 0%, #74c3fc 100%);
 }
 
+.mainviewer {
+  display: none;
+}
+
 /* Preloader 區塊 */
 #preloader {
   position: fixed;
