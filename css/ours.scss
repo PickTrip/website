@@ -87,7 +87,9 @@ spline-viewer {
 
 .hero-info {
   display: flex;
-  height: 100vh;
+  height: fit-content;
+  min-height: 100vh;
+  margin: 5vh 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -187,6 +189,15 @@ spline-viewer {
         }
       }
     }
+  }
+}
+
+.footer-dark {
+  .footer-divider {
+    display: none;
+  }
+  .paragraph {
+    display: none;
   }
 }
 

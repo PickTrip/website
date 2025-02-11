@@ -93,7 +93,10 @@ spline-viewer {
 
 .hero-info {
   display: flex;
-  height: 100vh;
+  height: -moz-fit-content;
+  height: fit-content;
+  min-height: 100vh;
+  margin: 5vh 0;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -182,6 +185,13 @@ spline-viewer {
   font-size: 1.2em;
   margin-bottom: 5%;
   text-decoration-line: none;
+}
+
+.footer-dark .footer-divider {
+  display: none;
+}
+.footer-dark .paragraph {
+  display: none;
 }
 
 @media screen and (max-width: 600px) {
