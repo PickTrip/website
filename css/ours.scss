@@ -1,5 +1,9 @@
 body {
-  max-width: 100vw;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   background: linear-gradient(180deg, #0189eb 0%, #74c3fc 100%);
 }
@@ -139,6 +143,7 @@ spline-viewer {
 }
 
 .hero-info4 {
+  width: 100vw;
   .imgsetgo {
     display: flex;
     flex-direction: column;
@@ -192,15 +197,6 @@ spline-viewer {
   }
 }
 
-.footer-dark {
-  .footer-divider {
-    display: none;
-  }
-  .paragraph {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .mainviewer {
     display: none;
@@ -212,6 +208,10 @@ spline-viewer {
     .hero-wrapper-two-2 {
       padding-top: 0;
     }
+  }
+  .hero-info {
+    width: 100vw;
+    overflow: hidden;
   }
   .hero-info1 {
     .imgset {

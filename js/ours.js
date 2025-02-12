@@ -104,26 +104,29 @@ window.addEventListener("load", () => {
 
   // 2. 等 Lottie 準備好再做 ScrollTrigger
   lottieAnimation.addEventListener("DOMLoaded", () => {
-    // 總共幾幀
+    // 原始總幀數
     const totalFrames = lottieAnimation.totalFrames;
+
+    // 減速係數，數值越大動畫越慢
+    const slowFactor = 3;
 
     // 建立一個 dummy object，供 GSAP tween 使用
     let obj = { currentFrame: 0 };
 
     gsap.to(obj, {
-      currentFrame: totalFrames,
+      currentFrame: totalFrames * slowFactor, // 讓 totalFrames 變多，使動畫變慢
       ease: "none", // 線性
       scrollTrigger: {
         trigger: "#lottie-container", // 觸發元素
         pin: true, // 釘住此區塊
         start: "top top",
-        end: "+=2000", // 滾動 2000px 距離後結束
+        end: `+=${2000 * slowFactor}`, // 放大 scroll 影響範圍
         scrub: true, // 跟隨滾動，可來回
         markers: false, // 除錯標記（測試時可開啟）
       },
       onUpdate: () => {
-        // 每次更新時，讓 Lottie 到達對應的幀
-        lottieAnimation.goToAndStop(obj.currentFrame, true);
+        // 讓 Lottie 到達對應的幀，但需縮小 slowFactor，確保範圍仍在 totalFrames 內
+        lottieAnimation.goToAndStop(obj.currentFrame / slowFactor, true);
       },
     });
   });
