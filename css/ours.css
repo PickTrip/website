@@ -142,58 +142,6 @@ spline-viewer {
 .hero-info4 {
   width: 100vw;
 }
-.hero-info4 .imgsetgo {
-  display: flex;
-  flex-direction: column;
-}
-.hero-info4 .imgsetgo .row {
-  display: inline-flex;
-  align-items: center;
-  gap: 19px;
-  height: 300px;
-  overflow: scroll;
-  margin-top: 20px;
-}
-.hero-info4 .imgsetgo .row .goplace {
-  border-radius: 30px;
-  width: 300px;
-  height: 100%;
-  background-image: url(https://images.unsplash.com/photo-1734784548166-a1ffe07dd7cd?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
-  background-size: auto 300px;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-.hero-info4 .imgsetgo .row .goplace .city {
-  width: 100%;
-  height: 100%;
-  border-radius: 30px;
-  background-color: rgba(0, 0, 0, 0.361);
-  opacity: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: end;
-}
-.hero-info4 .imgsetgo .row .goplace .city p {
-  font-size: 2em;
-  color: aliceblue;
-  margin-bottom: 35%;
-}
-.hero-info4 .imgsetgo .row .goplace .city a {
-  width: 90%;
-  padding: 10px;
-  border-radius: 10px;
-  text-align: center;
-  background-color: aliceblue;
-  color: #008bf6;
-  font-size: 1.2em;
-  margin-bottom: 5%;
-  text-decoration-line: none;
-}
-
 @media screen and (max-width: 600px) {
   .mainviewer {
     display: none;
