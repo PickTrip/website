@@ -137,39 +137,6 @@ document.addEventListener("DOMContentLoaded", function () {
   var rowRight = document.querySelector(".row-right");
   var rowLeft = document.querySelector(".row-left");
 
-  // 為了達到無限輪播效果，將原有內容複製一次
-  rowRight.innerHTML += rowRight.innerHTML;
-  rowLeft.innerHTML += rowLeft.innerHTML;
-
-  // 初始平移位置
-  var posRight = 0;
-  var posLeft = 0;
-  // 設定輪播速度（可根據需要調整）
-  var speed = 0.5; // 每幀移動 0.5px，大約每秒 30px（60fps）
-
-  // 輪播動畫函數
-  function animate() {
-    // row-right 往右移動（向正方向平移）
-    posRight += speed;
-    // row-left 往左移動（向負方向平移）
-    posLeft -= speed;
-
-    // 若移動超過原本內容的寬度一半時，重置位置以達到無縫輪播效果
-    if (posRight >= rowRight.scrollWidth / 2) {
-      posRight = 0;
-    }
-    if (Math.abs(posLeft) >= rowLeft.scrollWidth / 2) {
-      posLeft = 0;
-    }
-
-    // 更新 CSS transform
-    rowRight.style.transform = "translateX(" + posRight + "px)";
-    rowLeft.style.transform = "translateX(" + posLeft + "px)";
-
-    requestAnimationFrame(animate);
-  }
-  animate();
-
   // 加入 hover 事件，當使用者滑入某個 goplace 時，顯示裡面的城市名稱與按鈕
   var goplaces = document.querySelectorAll(".goplace");
   goplaces.forEach(function (place) {

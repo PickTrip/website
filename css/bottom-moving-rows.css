@@ -5,6 +5,7 @@
   height: 300px;
   margin-top: 20px;
 }
+
 .hero-info4 .imgsetgo .row .goplace {
   border-radius: 30px;
   width: 300px;
@@ -12,11 +13,11 @@
   background-image: url(https://images.unsplash.com/photo-1734784548166-a1ffe07dd7cd?q=80&w=3864&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
   background-size: auto 300px;
   background-repeat: no-repeat;
-  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
+
 .hero-info4 .imgsetgo .row .goplace .city {
   width: 100%;
   height: 100%;
@@ -26,13 +27,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: end;
+  justify-content: center;
 }
+
 .hero-info4 .imgsetgo .row .goplace .city p {
-  font-size: 2em;
+  font-size: 2.5em;
+  font-weight: 500;
   color: aliceblue;
-  margin-bottom: 35%;
 }
+
 .hero-info4 .imgsetgo .row .goplace .city a {
   width: 90%;
   padding: 10px;
@@ -61,8 +64,10 @@
 /* Make sure the goplace items have a fixed width (adjust as needed) */
 .goplace {
   flex: 0 0 auto;
-  width: 300px; /* for example */
-  height: 200px; /* adjust height as needed */
+  width: 300px;
+  /* for example */
+  height: 200px;
+  /* adjust height as needed */
   background-size: cover;
   background-position: center;
   margin-right: 10px;
@@ -70,12 +75,12 @@
 
 /* Animation for top row: scroll right */
 .row-right {
-  animation: scrollRight 60s linear infinite;
+  animation: scrollRight 40s linear infinite;
 }
 
 /* Animation for bottom row: scroll left */
 .row-left {
-  animation: scrollLeft 60s linear infinite;
+  animation: scrollLeft 40s linear infinite;
 }
 
 /* Keyframes: translate by 50% (i.e. one full set of items) */
@@ -83,6 +88,7 @@
   0% {
     transform: translateX(-50%);
   }
+
   100% {
     transform: translateX(0);
   }
@@ -92,6 +98,7 @@
   0% {
     transform: translateX(0);
   }
+
   100% {
     transform: translateX(-50%);
   }
